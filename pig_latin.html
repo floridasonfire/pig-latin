@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="css/lib/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/lib/normalize.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
 
     <script src='js/lib/jquery-1.11.3.js'></script>
@@ -11,7 +12,21 @@
 
   </head>
   <body>
+    <div class="container">
+      <form id="pig-latin-form">
+        <div class="form-group">
+          <label for="sentence">Enter a sentence</label>
+          <input id="sentence-input" type="text">
+          <button class="btn btn-warning" type="submit">Pig Latin</button>
+        </div>
+      </form>
 
+      <div id="result">
+        <h4></h4>
+      </div>
+
+
+    </div>
 
   </body>
 </html>

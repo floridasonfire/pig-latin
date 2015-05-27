@@ -6,6 +6,19 @@ $( document ).ready(function() {
     console.log( "jQuery Ready" );
 
     $("#jqtest").text('jQuery Ready')
+
+    $("#pig-latin-form").submit(function(event){
+
+      var sentenceInput = $("#sentence-input").val();
+      var newSentence = translate(sentenceInput);
+
+      $("#result h4").text(newSentence);
+
+      event.preventDefault()
+    });
+
+
+
 });
 
 //raw js
