@@ -28,7 +28,7 @@ var addAy = function(text) {
 }
 
 var consAddAy = function(text) {
-  var regex = new RegExp("^[^aeiou]*");
+  var regex = new RegExp("^[^aeiou]*[qu]*");
   var cons = text.match(regex)[0];
   text = text.slice(cons.length);
   return text + cons + 'ay';

@@ -21,4 +21,7 @@ describe('consAddAy', function(){
   it("appends 'ay' to word starting with a consonant", function(){
       expect(consAddAy('dragon')).to.equal('agondray')
   });
+  it("appends 'ay' to word starting with a consonant - accounting for edge-cases of 'QU'", function(){
+      expect(consAddAy('squid')).to.equal('idsquay')
+  });
 });
