@@ -5,9 +5,20 @@ describe('foo', function() {
 });
 
 //pig_latin
-describe('add_ay', function() {
+describe('addAy', function() {
   it("appends 'ay' to word starting with a vowel", function() {
+    expect(addAy('add')).to.equal('adday');
+  });
+});
 
-    expect(add_ay('add')).to.equal('adday');
+describe('startsWithVowel', function(){
+  it("returns true when starts with vowel", function(){
+    expect(startsWithVowel('animal')).to.equal(true);
+  });
+});
+
+describe('consAddAy', function(){
+  it("appends 'ay' to word starting with a consonant", function(){
+      expect(consAddAy('dragon')).to.equal('agondray')
   });
 });
