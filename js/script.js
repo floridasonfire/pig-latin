@@ -28,7 +28,12 @@ var addAy = function(text) {
 }
 
 var consAddAy = function(text) {
-  var regex = new RegExp("^[^aeiou]*[qu]*");
+  var regex = new RegExp("^(qu|[bcdfghjklmnpqrstvwxz])*");
+
+  if (text.slice(0,1).toLowerCase() === 'y') {
+    regex = new RegExp("^(qu|[bcdfghjklmnpqrstvwxyz])*");
+  }
+
   var cons = text.match(regex)[0];
   text = text.slice(cons.length);
   return text + cons + 'ay';

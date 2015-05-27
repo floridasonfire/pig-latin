@@ -24,4 +24,11 @@ describe('consAddAy', function(){
   it("appends 'ay' to word starting with a consonant - accounting for edge-cases of 'QU'", function(){
       expect(consAddAy('squid')).to.equal('idsquay')
   });
+
+  it("appends 'ay' to word starting with a consonant - accounting for edge-cases of 'Y'", function(){
+      expect(consAddAy('yes')).to.equal('esyay')
+      expect(consAddAy('buying')).to.equal('uyingbay')
+      expect(consAddAy('crying')).to.equal('yingcray')
+  });
+
 });
