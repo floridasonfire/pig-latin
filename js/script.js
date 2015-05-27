@@ -13,6 +13,16 @@ var foo = function(bar) {
   return false;
 };
 
+var translate = function(text) {
+  var sentanceArray = text.split(" ");
+  var returnArray = [];
+  sentanceArray.forEach(function(word) {
+    var newWord = addAy(word);
+    returnArray.push(newWord);
+  });
+  return returnArray.join(" ");
+}
+
 var startsWithVowel = function(text){
   var regex = new RegExp("[aeiouAEIOU]");
   var temp = text.substring(0, 1).match(regex);
@@ -23,7 +33,7 @@ var addAy = function(text) {
   if (startsWithVowel(text)){
     return text = text + "ay";
   } else {
-    consAddAy(text)
+    return consAddAy(text)
   }
 }
 

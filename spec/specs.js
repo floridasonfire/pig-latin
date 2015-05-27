@@ -5,6 +5,12 @@ describe('foo', function() {
 });
 
 //pig_latin
+describe('translate', function() {
+  it("convert an entire sentance into pig latin", function() {
+    expect(translate('dragon buying squid')).to.equal('agondray uyingbay idsquay');
+  });
+});
+
 describe('addAy', function() {
   it("appends 'ay' to word starting with a vowel", function() {
     expect(addAy('add')).to.equal('adday');
